@@ -41,7 +41,6 @@ def determine_pass_fail(studentsList:list[dict]):
             isPass="Pass"
         else:
             isPass="Fail"
-
         print(f"{name} -> Status : {isPass}")
         list_of_pass_fail.append({name: isPass})
     return list_of_pass_fail
@@ -72,10 +71,8 @@ def find_lowest_performing_student(studentsList:list[dict]):
         if avg_mark<lowestMark:
             lowestMark=avg_mark
             lowest_student =name
-            
     print(f"Lowest performig students list : {lowest_student }")
     return lowest_student 
-
 
 
 def calculate_class_avg(studentsList:list[dict]):
@@ -84,13 +81,9 @@ def calculate_class_avg(studentsList:list[dict]):
     for student in studentsList:
         avg_mark=sum(student["marks"])/len(student["marks"])
         total_avg+=avg_mark
-    
-    class_avg=total_avg/len(studentsList)
-        
-            
+    class_avg=total_avg/len(studentsList)        
     print(f"class avg : {class_avg}")
     return class_avg 
-
 
 
 students = [ 
